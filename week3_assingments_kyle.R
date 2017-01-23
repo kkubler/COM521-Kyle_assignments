@@ -26,7 +26,7 @@ hist(week3_dataset_kyle$y)
 #compare week2 vector with week3 xcol
 wk3xcol <- week3_dataset_kyle$x
 pc5 <- cbind(week2.dataset, wk3xcol)
-summary(pc5) #shows similar descriptive stats
+#shows similar descriptive stats
 boxplot(pc5) #shows similarily of quartile & range
 sd(pc5) #compared with 
 sd(week2.dataset)
