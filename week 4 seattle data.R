@@ -19,11 +19,12 @@ my.top5000[sample(seq(1, nrow(my.top5000)), 5),]
 #pc3
 tapply(COS_Statistics_Top5000_Pages$Pageviews, COS_Statistics_Top5000_Pages$Month, sum)
 pc3 <- tapply(COS_Statistics_Top5000_Pages$Pageviews, COS_Statistics_Top5000_Pages$Month, sum)
-pc3<- as.data.frame(pc3)
+pc3 <- data.frame(months=names(pc3), total=pc3)
+row.names(pc3)<- NULL
 #pc4
 my.mobile$totalpages <- my.mobile$Sessions*my.mobile$PagesPerSession
 my.mobilemonth <- tapply(my.mobile$totalpages, my.mobile$Month, sum)
 total.views <- data.frame(months=names(my.mobilemonth), total=my.mobilemonth)
 row.names(total.views) <-NULL
 #pc5
-pc5 <- merge(pc3, pc4)
+pc5 <- merge(pc3, pc4, all.x = TRUE, all.y = TRUE, by="months")
