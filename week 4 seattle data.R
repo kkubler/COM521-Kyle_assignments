@@ -28,3 +28,6 @@ total.views <- data.frame(months=names(my.mobilemonth), total=my.mobilemonth)
 row.names(total.views) <-NULL
 #pc5
 pc5 <- merge(pc3, pc4, all.x = TRUE, all.y = TRUE, by="months")
+#pc6
+pc5$pct <- (pc5$total.y /pc5$total.x)*100
+
