@@ -13,8 +13,8 @@ summary(pc1) #global mean of DV is 75.55
 boxplot(test.df) #this shows some variance issues not sure how significant.
 hist(pc1$lifespan) #shows data is left skewed
 #pc3
-t.test(pc1$lifespan,pc1$lifespan [12:44] ) #report on things
-t.test(control, hi.dose) #report on things
+t.test(pc1$lifespan, pc1$lifespan [12:44] ) #report on things
+t.test(test.df$col1, test.df$X4) #report on things
 #pc4
 aov(col1~X2, data = test.df)
 aov(X3~X2, data = test.df)
