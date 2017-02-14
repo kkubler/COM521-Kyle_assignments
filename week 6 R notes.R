@@ -10,3 +10,5 @@ exampledata <- melt(exampledata, na.rm=TRUE)
 #if you want stats from each column, use lapply(exampledata, summary)
 #pc4
 #you can use summary to also use ANOVA for everything
+
+#how to do chi-squared stuff in R
